@@ -93,4 +93,177 @@ print(json.dumps(es.search(index = "albums", doc_type = "album", body = q1), ind
 print ("q2")
 print(json.dumps(es.search(index = "songs", doc_type = "album", body = q2), indent = 2))	#search albums released after 2014
 print ("q3")
-print(json.dumps(es.search(index = "songs", doc_type = "album", body = q3), indent = 2))	#search for albums having artists named  "Rihanna" released in 1975-2001
+print(json.dumps(es.search(index = "songs", doc_type = "album", body = q3), indent = 2))	#search for albums having artists named"Rihanna" released in 1975-2001
+
+
+#Outputs:
+
+q1
+{
+  "took": 331,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": 0,
+    "max_score": null,
+    "hits": []
+  }
+}
+q2
+{
+  "took": 247,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": 15,
+    "max_score": 1.0,
+    "hits": [
+      {
+        "_index": "songs",
+        "_type": "album",
+        "_id": "rnSaqWEBv7UBv9hU3TdJ",
+        "_score": 1.0,
+        "_source": {
+          "album": "Little Seeds",
+          "artist": "Shovels & Rope",
+          "genre": "Folk",
+          "year": "2016"
+        }
+      },
+      {
+        "_index": "songs",
+        "_type": "album",
+        "_id": "7nSaqWEBv7UBv9hU3TdJ",
+        "_score": 1.0,
+        "_source": {
+          "album": "Dirty Heads",
+          "artist": "Dirty Heads",
+          "genre": "Reggae",
+          "year": "2016"
+        }
+      },
+      {
+        "_index": "songs",
+        "_type": "album",
+        "_id": "73SaqWEBv7UBv9hU3TdJ",
+        "_score": 1.0,
+        "_source": {
+          "album": "Every Open Eye",
+          "artist": "CHVRCHES",
+          "genre": "Indie",
+          "year": "2016"
+        }
+      },
+      {
+        "_index": "songs",
+        "_type": "album",
+        "_id": "mXSaqWEBv7UBv9hU3TdJ",
+        "_score": 1.0,
+        "_source": {
+          "album": "Singles",
+          "artist": "Future Islands",
+          "genre": "Indie",
+          "year": "2014"
+        }
+      },
+      {
+        "_index": "songs",
+        "_type": "album",
+        "_id": "m3SaqWEBv7UBv9hU3TdJ",
+        "_score": 1.0,
+        "_source": {
+          "album": "Disappear Here",
+          "artist": "Bad Suns",
+          "genre": "Rock",
+          "year": "2016"
+        }
+      },
+      {
+        "_index": "songs",
+        "_type": "album",
+        "_id": "nHSaqWEBv7UBv9hU3TdJ",
+        "_score": 1.0,
+        "_source": {
+          "album": "ANTI",
+          "artist": "Rihanna",
+          "genre": "Hip hop",
+          "year": "2016"
+        }
+      },
+      {
+        "_index": "songs",
+        "_type": "album",
+        "_id": "p3SaqWEBv7UBv9hU3TdJ",
+        "_score": 1.0,
+        "_source": {
+          "album": "The Life of Pablo",
+          "artist": "Kanye West",
+          "genre": "Hip hop",
+          "year": "2016"
+        }
+      },
+      {
+        "_index": "songs",
+        "_type": "album",
+        "_id": "53SaqWEBv7UBv9hU3TdJ",
+        "_score": 1.0,
+        "_source": {
+          "album": "No No No",
+          "artist": "Beirut",
+          "genre": "Indie",
+          "year": "2015"
+        }
+      },
+      {
+        "_index": "songs",
+        "_type": "album",
+        "_id": "6XSaqWEBv7UBv9hU3TdJ",
+        "_score": 1.0,
+        "_source": {
+          "album": "V",
+          "artist": "Maroon 5",
+          "genre": "Pop",
+          "year": "2015"
+        }
+      },
+      {
+        "_index": "songs",
+        "_type": "album",
+        "_id": "pXSaqWEBv7UBv9hU3TdJ",
+        "_score": 1.0,
+        "_source": {
+          "album": "Blackstar",
+          "artist": "David Bowie",
+          "genre": "Rock",
+          "year": "2016"
+        }
+      }
+    ]
+  }
+}
+q3
+{
+  "took": 9,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": 0,
+    "max_score": null,
+    "hits": []
+  }
+}
