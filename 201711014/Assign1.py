@@ -6,9 +6,8 @@ from elasticsearch import Elasticsearch
 from elasticsearch import helpers
 import csv
 import time
-import sys
-reload(sys)  
-sys.setdefaultencoding('Cp1252')
+
+# mappping Elasticsearch
 
 es=Elasticsearch([{"host" : "127.0.0.1", "port" : 9200}])
 mapping = {
@@ -34,6 +33,8 @@ mapping = {
 		}
 	}
 }
+
+
 
 q1 = {
 	"query" : {
