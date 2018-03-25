@@ -10,7 +10,7 @@ nlp = en_core_web_sm.load()
 
 #uploading the csv file
 
-df = pd.read_csv('C:\\Anaconda\\albums.csv')
+df = pd.read_csv('C:/Anaconda/albums.csv')
 print("\n")
 
 #NEE of Album Name
