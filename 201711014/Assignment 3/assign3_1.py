@@ -9,7 +9,7 @@ nlp = en_core_web_sm.load()
 
 #Uploading CSV File
 
-df = pd.read_csv('C:\\Anaconda\\albums.csv')
+df = pd.read_csv('C:/Anaconda/albums.csv')
 print("\n")
 
 
