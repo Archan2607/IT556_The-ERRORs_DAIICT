@@ -10,7 +10,7 @@ nlp = en_core_web_sm.load()
 
 #Uploading the given csv file
 
-df = pd.read_csv('C:\\Anaconda\\albums.csv')
+df = pd.read_csv('C:/Anaconda/albums.csv')
 print("\n")
 
 #Lemmatization of Album Names
